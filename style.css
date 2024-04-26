@@ -21,3 +21,8 @@ body {
 .footer {
     background-color: #222831;
 }
+
+.modal-content {
+    color: #EEEEEE;
+    background-color: #31363F !important;
+}
