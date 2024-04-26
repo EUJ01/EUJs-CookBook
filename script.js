@@ -1,21 +1,23 @@
 function getFew() {
     var food = document.getElementById("food").value;
+    document.getElementById("food").value = "";
 
     var url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
     fetch(url).
         then(res => res.json()).
-        then(data => console.log(data.meals));
-    // then(data => display(data.meals, 1))
+        // then(data => console.log(data.meals));
+        then(data => display(data.meals, 1));
 }
 
 function getAll() {
     var food = document.getElementById("food").value;
+    document.getElementById("food").value = "";
 
     var url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${food}`;
     fetch(url).
         then(res => res.json()).
-        then(data => console.log(data.meals));
-    // then(data => display(data.meals, 2))
+        // then(data => console.log(data.meals));
+        then(data => display(data.meals, 2));
 }
 
 function display(items, count) {
@@ -35,7 +37,7 @@ function display(items, count) {
                         <b><p>ID: ${items[i].idMeal} <br> Cuisine: ${items[i].strArea}</p></b>
 
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Cooking Instructions</button>
+                        <b>Cooking Instructions</b></button>
                         
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
@@ -73,7 +75,7 @@ function display(items, count) {
                         <b><p>ID: ${items[i].idMeal} <br> Cuisine: ${items[i].strArea}</p></b>
 
                         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Cooking Instructions</button>
+                        <b>Cooking Instructions</b></button>
                         
                         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">

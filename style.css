@@ -1,4 +1,23 @@
 body {
     background-color: #222831;
     color: #EEEEEE;
+    margin-bottom: 140px;
+}
+
+.card,
+.card-body {
+    border-radius: 10px !important;
+    background-color: #9fc7c9;
+}
+
+.btn {
+    opacity: 75%;
+}
+
+.btn:hover {
+    opacity: 100%;
+}
+
+.footer {
+    background-color: #222831;
 }
